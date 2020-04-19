@@ -1,1 +1,25 @@
 token: 745210baby
+server:
+  port: 10001
+spring:
+  application:
+    name: bug-consumer
+  redis:
+    host: 127.0.0.1
+    password: ok
+    port: 6379
+  sleuth:
+    sampler:
+      percentage: 1.0
+  zipkin:
+    base-url: http://localhost:8003
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:ok@localhost:8001/eureka/
+feign:
+  hystrix:
+    enabled: true
+management:
+  security:
+    enabled: false
