@@ -1,0 +1,19 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: user-consumer
+  redis:
+    host: 127.0.0.1
+    password: ok
+    port: 6379
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:ok@localhost:8001/eureka/
+feign:
+  hystrix:
+    enabled: true
+management:
+  security:
+    enabled: false
